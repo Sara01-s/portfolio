@@ -5,130 +5,201 @@
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--primary-color) transparent;
+}
 
-    &::-webkit-scrollbar {
-        width: 6px;
-    }
+.container::-webkit-scrollbar {
+    width: 6px;
+}
 
-    &::-webkit-scrollbar-track {
-        background: transparent;
-    }
+.container::-webkit-scrollbar-track {
+    background: transparent;
+}
 
-    &::-webkit-scrollbar-thumb {
-        background-color: var(--primary-color);
-        border-radius: 3px;
-    }
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 3px;
 }
 
 .blog-section {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-left: 20%;
-	padding-right: 20%;
-	overflow: auto;
+    padding-right: 20%;
+    overflow: auto;
+}
 
-    article {
-		max-width: 100%;
-        background: rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
-        border-radius: 1rem;
-        padding: 3rem;
-        margin: 0 auto;
+.blog-section article {
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 1rem;
+    padding: 3rem;
+    margin: 0 auto;
+}
 
-        header {
-            margin-bottom: 2rem;
-        }
+.blog-section article header {
+    margin-bottom: 2rem;
+}
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
+.blog-section article h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
 
-        a {
-            color: var(--primary-color);
-            transition: opacity 0.2s ease;
-        }
+.blog-section article a {
+    color: var(--primary-color);
+    transition: opacity 0.2s ease;
+}
 
-        a:hover {
-            opacity: 0.8;
-        }
+.blog-section article a:hover {
+    opacity: 0.8;
+}
 
-        img {
-            display: block;
-            margin: 2rem auto;
-            max-width: 100%;
-            border-radius: 1rem;
-        }
+.blog-section article img {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
 
-        h2 {
-            color: var(--primary-color);
-        }
+.blog-section article h2 {
+    color: var(--primary-color);
+}
 
-        img.hero-image {
-            width: 100%;
-        }
+.blog-section article img.hero-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
 
-        pre {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 1.5rem;
-            border-radius: 1rem;
-            overflow-x: auto;
-            margin: 1.5rem 0;
-            backdrop-filter: none;
-            -webkit-backdrop-filter: none;
-        }
+.blog-section article pre {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
 
-        code {
-            font-family: monospace;
-            font-size: 1rem;
-            color: #fff;
-        }
+.blog-section article code {
+    font-family: monospace;
+    font-size: 1rem;
+    color: #fff;
+}
 
-        .post-meta {
-            color: var(--primary-color);
-            font-size: 0.9rem;
-            display: flex;
-            gap: 1rem;
-        }
+.blog-section article .post-meta {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
-        .hero-image {
-            width: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            border-radius: 0.5rem;
-            margin-bottom: 2rem;
-        }
+.blog-section article .post-body {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
 
-        .post-body {
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
+.blog-section article .post-body p {
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    text-align: justify;
+}
 
-        .post-body p {
-            margin-bottom: 1.5rem;
-            color: var(--text-color);
-        }
+.blog-section article .mathjax {
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+}
 
-        .mathjax {
-            display: block;
-            margin: 1rem 0;
-            text-align: center;
-        }
+.blog-section article .mathjax .mjx-chtml {
+    display: inline-block;
+    line-height: normal;
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
 
-        .mathjax .mjx-chtml {
-            display: inline-block;
-            line-height: normal;
-            font-size: 1.2em;
-            margin: 0.5em 0;
-        }
+.blog-section article .mathjax .mjx-chtml.mjx-chtml-display {
+    display: block;
+    text-align: center;
+    margin: 1em 0;
+}
 
-        .mathjax .mjx-chtml.mjx-chtml-display {
-            display: block;
-            text-align: center;
-            margin: 1em 0;
-        }
+@media (max-width: 768px) {
+    .container {
+        padding-top: 60px;
+    }
+
+    .blog-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .blog-section article {
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .blog-section article h1 {
+        font-size: 2rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .blog-section article .post-meta {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .blog-section article .post-body {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .blog-section article .post-body p {
+        margin-bottom: 1rem;
+    }
+
+    .blog-section article pre {
+        padding: 1rem;
+    }
+
+    .blog-section article code {
+        font-size: 0.9rem;
+    }
+
+    .blog-section article img.hero-image {
+        max-height: 300px;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-section {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .blog-section article {
+        padding: 1rem;
+    }
+
+    .blog-section article h1 {
+        font-size: 1.7rem;
+    }
+
+    .blog-section article .post-body {
+        font-size: 0.95rem;
     }
 }
