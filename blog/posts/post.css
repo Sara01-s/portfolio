@@ -44,7 +44,7 @@
 }
 
 .blog-section article h1 {
-    font-size: 3rem;
+    font-size: 3lh;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
@@ -92,20 +92,20 @@
 
 .blog-section article code {
     font-family: monospace;
-    font-size: 1rem;
+    font-size: 1lh;
     color: #fff;
 }
 
 .blog-section article .post-meta {
     color: var(--primary-color);
-    font-size: 0.9rem;
+    font-size: 0.9lh;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
 .blog-section article .post-body {
-    font-size: 1.1rem;
+    font-size: 1.1lh;
     line-height: 1.8;
 }
 
@@ -150,7 +150,7 @@
     }
 
     .blog-section article h1 {
-        font-size: 2rem;
+        font-size: 2lh;
         text-align: center;
         word-wrap: break-word;
     }
@@ -163,7 +163,7 @@
     }
 
     .blog-section article .post-body {
-        font-size: 1rem;
+        font-size: 1lh;
         line-height: 1.6;
     }
 
@@ -196,10 +196,10 @@
     }
 
     .blog-section article h1 {
-        font-size: 1.7rem;
+        font-size: 1.7lh;
     }
 
     .blog-section article .post-body {
-        font-size: 0.95rem;
+        font-size: 0.95lh;
     }
 }
