@@ -1,0 +1,6 @@
+# robots.txt para Sara San Martín - Portfolio
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sara01-s.github.io/portfolio/sitemap.xml
