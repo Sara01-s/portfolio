@@ -4,10 +4,24 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sara San Martín - Blog</title>
+	<meta name="description" data-i18n-attr="content: meta.blogdescription"
+		content="Technical articles by Sara San Martín about engine and game development, graphics programming and shaders.">
+	<link rel="canonical" href="https://sara01-s.github.io/portfolio/blog/index.html">
+
+	<meta property="og:title" content="Blog | Sara San Martín">
+	<meta property="og:description" data-i18n-attr="content: meta.blogdescription"
+		content="Technical articles by Sara San Martín about engine and game development, graphics programming and shaders.">
+	<meta property="og:image" content="https://sara01-s.github.io/portfolio/resources/icon_clouds_rounded.webp">
+	<meta property="og:url" content="https://sara01-s.github.io/portfolio/blog/index.html">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Sara San Martín">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<title>Blog | Sara San Martín</title>
 	<link rel="icon" type="image/webp" href="../resources/icon_clouds_rounded.webp" alt="Clouds Icon">
 	<link rel="stylesheet" href="../styles.css">
 	<link rel="stylesheet" href="blog.css">
+	<script src="../i18n.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -16,20 +30,22 @@
 		<div class="up-section">
 			<div class="logo-container">
 				<a href="../index.html" class="logo-circle"></a>
-				<a href="../index.html" class="blog">Home</a>
+				<a href="../index.html" class="blog" data-i18n="nav.home">Home</a>
+				<button type="button" class="lang-toggle" data-i18n="lang.toggle"
+					data-i18n-attr="aria-label: lang.togglelabel, title: lang.togglelabel">ES</button>
 			</div>
 		</div>
 
 		<section class="left-section">
-			<h1>Blog</h1>
-			<p>Technical articles about engine and game development, </br> graphics programming and other things I find
-				interesting.</p>
+			<h1 data-i18n="blog.title">Blog</h1>
+			<p data-i18n="blog.description">Technical articles about engine and game development, </br> graphics
+				programming and other things I find interesting.</p>
 		</section>
 
 		<div class="right-section">
 			<section class="blog-grid">
 				<a href="posts/shell-texturing/index.html" class="grid-item">
-					<video autoplay loop muted playsinline preload="auto"
+					<video autoplay loop muted playsinline preload="metadata"
 						aria-label="Shell texturing hand scene demonstration">
 						<source src="../resources/video_shell_texturing_hand_scene.webm" type="video/webm">
 						<source src="../resources/video_shell_texturing_hand_scene.mp4" type="video/mp4">

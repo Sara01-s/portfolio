@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 400" width="864" height="400"
+	role="img" aria-label="Coming soon">
+	<defs>
+		<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+			<stop offset="0%" stop-color="#2c6b8f" />
+			<stop offset="100%" stop-color="#87ceeb" />
+		</linearGradient>
+	</defs>
+
+	<rect width="864" height="400" fill="url(#sky)" />
+
+	<!-- Clock face, sized to survive the card's 432x200 crop. -->
+	<g transform="translate(432 150)">
+		<circle r="58" fill="rgba(25, 81, 104, 0.55)" stroke="#ffffff" stroke-opacity="0.5" stroke-width="3" />
+		<g stroke="#ffffff" stroke-opacity="0.9" stroke-width="6" stroke-linecap="round">
+			<line x1="0" y1="0" x2="0" y2="-30" />
+			<line x1="0" y1="0" x2="22" y2="10" />
+		</g>
+	</g>
+
+	<text x="432" y="262" text-anchor="middle" fill="#ffffff" fill-opacity="0.9"
+		font-family="Nunito, Segoe UI, sans-serif" font-size="34" font-weight="700"
+		letter-spacing="1.5">DISPONIBLE PRÓXIMAMENTE</text>
+</svg>

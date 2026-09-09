@@ -74,6 +74,11 @@ body {
 			font-size: 1rem;
 			font-weight: 500;
 		}
+
+		.lang-toggle {
+			margin-left: auto;
+			margin-right: 2rem;
+		}
 	}
 
 	/* Hero Section */
@@ -182,12 +187,12 @@ body {
 					bottom: 0;
 					left: 0;
 					right: 0;
-					padding: 0.75rem;
+					padding: 0.5rem 0.75rem;
 					background-color: var(--secondary-color);
 					color: white;
 					font-weight: bold;
-					font-size: 0.9lh;
-					line-height: 1.4;
+					font-size: 0.95rem;
+					line-height: 1.3;
 					text-align: left;
 					text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 					backdrop-filter: blur(5px);
@@ -197,8 +202,8 @@ body {
 					gap: 0.5rem;
 
 					.external-link-icon {
-						width: 16px;
-						height: 16px;
+						width: 14px;
+						height: 14px;
 						filter: brightness(0) invert(1);
 						opacity: 0.8;
 					}
@@ -248,4 +253,44 @@ body {
 			}
 		}
     }
+}
+
+/* Language switch, shared by the landing page and the blog. */
+.lang-toggle {
+	background-color: var(--secondary-color, rgba(25, 81, 104, 0.7));
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	border: 1px solid rgba(135, 206, 235, 0.4);
+	border-radius: 0.5rem;
+	color: var(--primary-color);
+	cursor: pointer;
+	font-family: var(--text-font);
+	font-size: 0.9rem;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+	padding: 0.25rem 0.7rem;
+	transition: transform 0.1s ease-out, background-color 0.2s ease;
+}
+
+.lang-toggle:hover {
+	background-color: rgba(25, 81, 104, 0.9);
+	transform: translateY(-2px);
+}
+
+.lang-toggle:focus-visible {
+	outline: 2px solid var(--primary-color);
+	outline-offset: 2px;
+}
+
+/* Readable by search engines and screen readers, invisible on screen. */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }

@@ -4,11 +4,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Shell Texturing</title>
+	<meta name="description" data-i18n-attr="content: meta.postdescription"
+		content="A step-by-step breakdown of the Shell Texturing technique for rendering fur and grass in games, implemented in Unity with GLSL shaders.">
+	<link rel="canonical" href="https://sara01-s.github.io/portfolio/blog/posts/shell-texturing/index.html">
+
+	<meta property="og:title" content="Shell Texturing | Sara San Martín">
+	<meta property="og:description" data-i18n-attr="content: meta.postdescription"
+		content="A step-by-step breakdown of the Shell Texturing technique for rendering fur and grass in games, implemented in Unity with GLSL shaders.">
+	<meta property="og:image" content="https://sara01-s.github.io/portfolio/resources/icon_clouds_rounded.webp">
+	<meta property="og:url"
+		content="https://sara01-s.github.io/portfolio/blog/posts/shell-texturing/index.html">
+	<meta property="og:type" content="article">
+	<meta property="og:site_name" content="Sara San Martín">
+	<meta property="article:author" content="Sara San Martín">
+	<meta property="article:published_time" content="2024-07-12">
+	<meta name="twitter:card" content="summary_large_image">
+
+	<title>Shell Texturing | Sara San Martín</title>
 	<link rel="icon" type="image/webp" href="../../../resources/icon_clouds_rounded.webp" alt="Clouds Icon">
 	<link rel="stylesheet" href="../../../styles.css">
 	<link rel="stylesheet" href="../../blog.css">
 	<link rel="stylesheet" href="../post.css">
+	<script src="../../../i18n.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -33,6 +50,31 @@
 	</script>
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 	<script src="./load-content.js"></script>
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"headline": "Shell Texturing",
+		"description": "A step-by-step breakdown of the Shell Texturing technique for rendering fur and grass in games, implemented in Unity with GLSL shaders.",
+		"image": "https://sara01-s.github.io/portfolio/resources/icon_clouds_rounded.webp",
+		"datePublished": "2024-07-12",
+		"inLanguage": ["en", "es"],
+		"author": {
+			"@type": "Person",
+			"name": "Sara San Martín",
+			"url": "https://sara01-s.github.io/portfolio/"
+		},
+		"publisher": {
+			"@type": "Person",
+			"name": "Sara San Martín"
+		},
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "https://sara01-s.github.io/portfolio/blog/posts/shell-texturing/index.html"
+		},
+		"keywords": "shell texturing, fur rendering, grass rendering, Unity, GLSL, shaders, graphics programming"
+	}
+	</script>
 </head>
 
 <body>
@@ -40,18 +82,20 @@
 		<div class="up-section">
 			<div class="logo-container">
 				<a href="../../../index.html" class="logo-circle"></a>
-				<a href="../../../index.html" class="blog">Home</a>
-				<a href="../../../blog/index.html" class="blog">Blog</a>
+				<a href="../../../index.html" class="blog" data-i18n="nav.home">Home</a>
+				<a href="../../../blog/index.html" class="blog" data-i18n="nav.blog">Blog</a>
+				<button type="button" class="lang-toggle" data-i18n="lang.toggle"
+					data-i18n-attr="aria-label: lang.togglelabel, title: lang.togglelabel">ES</button>
 			</div>
 		</div>
 
 		<div class="blog-section">
 			<article>
 				<header>
-					<h1>Shell Texturing (es).</h1>
+					<h1 data-i18n="post.shell.title">Shell Texturing.</h1>
 					<div class="post-meta">
 						<time datetime="2025-03-18">Jul 12, 2024</time>
-						<span class="reading-time">8 min read.</span>
+						<span class="reading-time" data-i18n="post.shell.readingtime">8 min read.</span>
 					</div>
 				</header>
 
@@ -60,7 +104,7 @@
 						<source src="../../../resources/video_shell_texturing_hand_scene.webm" type="video/webm">
 						<source src="../../../resources/video_shell_texturing_hand_scene.mp4" type="video/mp4">
 					</video>
-					<span>Source Code: </span><a href="https://github.com/Sara01-s/Shell-Texturing" target="_blank" rel="noreferrer">GitHub.</a>
+					<span data-i18n="post.sourcecode">Source Code: </span><a href="https://github.com/Sara01-s/Shell-Texturing" target="_blank" rel="noreferrer">GitHub.</a>
 					<div id="content"></div>
 				</section>
 			</article>

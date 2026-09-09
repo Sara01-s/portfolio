@@ -4,16 +4,20 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description"
+	<meta name="description" data-i18n-attr="content: meta.description"
 		content="Sara is a Game Developer and Designer. Explore her projects, games, blogs and more on her website.">
-	<meta name="keywords"
-		content="Sara San Martin, Sara San Martín, game developer, game design, games, sara01, Sara01, shaders, ECS, github, portafolio, portfolio">
 	<meta property="og:title" content="Sara San Martín | Game Developer and Designer">
-	<meta property="og:description" content="Personal Sara's website. Explore her projects, games, blogs and more.">
+	<meta property="og:description" data-i18n-attr="content: meta.ogdescription"
+		content="Personal Sara's website. Explore her projects, games, blogs and more.">
 	<meta property="og:image" content="https://sara01-s.github.io/portfolio/resources/icon_clouds_rounded.webp">
 	<meta property="og:url" content="https://sara01-s.github.io/portfolio/">
 	<meta property="og:type" content="website">
-	<title>Sara San Martín</title>
+	<meta property="og:site_name" content="Sara San Martín">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:locale:alternate" content="es_ES">
+	<meta name="twitter:card" content="summary_large_image">
+	<title>Sara San Martín | Game Developer and Designer</title>
+	<link rel="canonical" href="https://sara01-s.github.io/portfolio/">
 	<link rel="icon" type="image/webp" href="https://sara01-s.github.io/portfolio/resources/icon_clouds_rounded.webp">
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +27,8 @@
 		rel="stylesheet">
 
 	<link rel="stylesheet" href="styles.css">
+
+	<script src="i18n.js"></script>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -39,7 +45,7 @@
 			"https://sara01.itch.io/"
 		],
 		"jobTitle": "Game Developer and Designer",
-		"alumniOf": "Intituto Profesional Arcos"
+		"alumniOf": "Instituto Profesional Arcos"
     }
     </script>
 </head>
@@ -53,15 +59,19 @@
 	<main class="main-container">
 		<div class="logo-container">
 			<div class="logo-circle"></div>
-			<a href="blog/index.html" class="blog">Blog</a>
+			<a href="blog/index.html" class="blog" data-i18n="nav.blog">Blog</a>
+			<button type="button" class="lang-toggle" data-i18n="lang.toggle"
+				data-i18n-attr="aria-label: lang.togglelabel, title: lang.togglelabel">ES</button>
 		</div>
 
 		<section class="hero">
-			<h1>Hello!</h1>
-			<p>I'm <i>Sara San Martín</i>, professional <span class="highlight">Game Developer</span> and <span
-					class="highlight">Designer</span>.</p>
-			<p>I specialize in C++ and C#, with 6 years of experience in Unity development. <br>My largest project to
-				date has been the <i>design</i> and <i>development</i> of a complete custom animation software.</p>
+			<h1><span data-i18n="hero.greeting">Hello!</span><span class="visually-hidden"
+					data-i18n="hero.h1context">Sara San Martín, Game Developer and Designer</span></h1>
+			<p data-i18n="hero.intro">I'm <i>Sara San Martín</i>, professional <span class="highlight">Game
+					Developer</span> and <span class="highlight">Designer</span>.</p>
+			<p data-i18n="hero.specialty">I specialize in C++ and C#, with 6 years of experience in Unity development.
+				<br>My largest project to date has been the <i>design</i> and <i>development</i> of a complete custom
+				animation software.</p>
 			<div class="social-links">
 				<a href="https://github.com/Sara01-s" class="social-dot" target="_blank" rel="noopener noreferrer"><i
 						class="fab fa-github"></i></a>
@@ -72,42 +82,38 @@
 			</div>
 		</section>
 
-		<h2 class="category">PROJECTS</h2>
+		<h2 class="category" data-i18n="category.projects">PROJECTS</h2>
 
 		<section class="projects">
 			<a href="https://leadwortstudios.github.io/Website/watercolor_intro.html" target="_blank"
 				rel="noopener noreferrer" class="project">
 				<div class="item-content">
-					<img src="resources/tex_watercolor_card.png"
+					<img src="resources/tex_watercolor_card.webp"
 						alt="Screenshot of the Watercolor Filter implementation.">
-					<div class="item-text">Watercolor Processor <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="project.watercolor">Watercolor Processor</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
 			<a href="https://leadwortstudios.github.io/Website/kuwahara_intro.html" target="_blank"
 				rel="noopener noreferrer" class="project">
 				<div class="item-content">
-					<img src="resources/tex_kuwahara_card.png"
-						alt="Screenshot of the Kuwahara Filter implementation.">
-					<div class="item-text">Kuwahara Filter <img src="resources/icon_open-in-new-tab.svg"
+					<img src="resources/tex_kuwahara_card.webp" alt="Screenshot of the Kuwahara Filter implementation.">
+					<div class="item-text"><span data-i18n="project.kuwahara">Kuwahara Filter</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
-			<a href="https://github.com/Sara01-s/Leadwort" target="_blank"
-				rel="noopener noreferrer" class="project">
+			<a href="https://github.com/Sara01-s/Leadwort" target="_blank" rel="noopener noreferrer" class="project">
 				<div class="item-content">
-					<img src="resources/tex_leadwort_game_engine.png"
-						alt="Screenshot of the Leadwort Game Engine.">
-					<div class="item-text">Custom Game Engine <img src="resources/icon_open-in-new-tab.svg"
+					<img src="resources/tex_leadwort_game_engine.webp" alt="Screenshot of the Leadwort Game Engine.">
+					<div class="item-text"><span data-i18n="project.engine">Custom Game Engine</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
-			<a href="https://assetstore.unity.com/publishers/3546" target="_blank"
-				rel="noopener noreferrer" class="project">
+			<a href="https://assetstore.unity.com/publishers/3546" target="_blank" rel="noopener noreferrer"
+				class="project">
 				<div class="item-content">
-					<img src="resources/tex_gamelogic.png"
-						alt="Screenshot of Dithering Gamelogic Asset Pack.">
-					<div class="item-text">Co-Authored Assets <img src="resources/icon_open-in-new-tab.svg"
+					<img src="resources/tex_gamelogic.webp" alt="Screenshot of Dithering Gamelogic Asset Pack.">
+					<div class="item-text"><span data-i18n="project.assets">Co-Authored Assets</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
@@ -125,7 +131,7 @@
 					</div>
 					<img src="resources/tex_eightfold_path_switch.webp"
 						alt="Screenshot of The Eightfold Path game, showing gameplay on a Nintendo Switch.">
-					<div class="item-text">Credited in: The Eightfold Path <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="project.eightfold">Credited in: The Eightfold Path</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
@@ -136,12 +142,12 @@
 						style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: row; gap: 5px; background-color: rgba(25, 81, 104, 0.7); backdrop-filter: blur(5px); border-radius: 10px; padding: 5px; z-index: 10;">
 						<img src="resources/icon_github.svg" alt="GitHub icon" style="width: 20px; height: 20px;">
 					</div>
-					<video autoplay loop muted playsinline preload="auto">
+					<video autoplay loop muted playsinline preload="metadata">
 						<source src="resources/video_simple_motions_demo_optimized_150speed.webm" type="video/webm">
 						<source src="resources/video_simple_motions_demo_optimized_150speed.mp4" type="video/mp4">
 						**Video: Demo of the SimpleMotions custom animation software made by Sara.**
 					</video>
-					<div class="item-text">Custom Animation Software <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="project.animation">Custom Animation Software</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
@@ -154,7 +160,7 @@
 					</div>
 					<img src="resources/tex_mc_shaders.webp"
 						alt="Screenshot of Minecraft gameplay with custom GLSL shaders applied, showing enhanced lighting and shadows.">
-					<div class="item-text">Minecraft Shaders with GLSL <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="project.shaders">Minecraft Shaders with GLSL</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
@@ -166,7 +172,7 @@
 					</div>
 					<img src="resources/tex_vulkan_engine.webp"
 						alt="Screenshot of a 3D scene rendered with a C++ Vulkan engine, displaying complex lighting and geometry.">
-					<div class="item-text">C++ 3D Vulkan Renderer <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="project.vulkan">C++ 3D Vulkan Renderer</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
@@ -178,12 +184,12 @@
 						<img src="resources/icon_clouds_rounded.webp" alt="Blog icon featuring clouds"
 							style="width: 20px; height: 20px;">
 					</div>
-					<video autoplay loop muted playsinline preload="auto">
+					<video autoplay loop muted playsinline preload="metadata">
 						<source src="resources/video_shell_texturing_hand_scene.webm" type="video/webm">
 						<source src="resources/video_shell_texturing_hand_scene.mp4" type="video/mp4">
 						**Video: Demonstrating fur rendering techniques in games.**
 					</video>
-					<div class="item-text">Blog: Rendering Fur in games <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="project.blogfur">Blog: Rendering Fur in games</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
@@ -195,7 +201,7 @@
 					</div>
 					<img src="resources/tex_ecs.webp"
 						alt="Log of an Entity Component System (ECS) architecture in C++.">
-					<div class="item-text">C++ ECS API <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="project.ecs">C++ ECS API</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
@@ -205,19 +211,90 @@
 						style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: row; gap: 5px; background-color: rgba(25, 81, 104, 0.7); backdrop-filter: blur(5px); border-radius: 10px; padding: 5px; z-index: 10;">
 						<img src="resources/icon_github.svg" alt="GitHub icon" style="width: 20px; height: 20px;">
 					</div>
-					<video autoplay loop muted playsinline preload="auto">
+					<video autoplay loop muted playsinline preload="metadata">
 						<source src="resources/video_pong.webm" type="video/webm">
 						<source src="resources/video_pong.mp4" type="video/mp4">
 						**Video: Gameplay footage of Pong, developed in C and OpenGL.**
 					</video>
-					<div class="item-text"><i>Pong</i> made in C and OpenGL <img
+					<div class="item-text"><span data-i18n="project.pong"><i>Pong</i> made in C and OpenGL</span> <img
 							src="resources/icon_open-in-new-tab.svg" class="external-link-icon"
 							alt="Open in new tab icon"></div>
 				</div>
 			</a>
 		</section>
 
-		<h2 class="category">GAMES</h2>
+
+		<h2 class="category" data-i18n="category.talks">TALKS</h2>
+
+		<section class="projects">
+			<a href="https://www.youtube.com/@gamedevplanet" target="_blank" rel="noopener noreferrer" class="project">
+				<div class="item-content">
+					<div class="project-icons-overlay"
+						style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: row; gap: 5px; background-color: rgba(25, 81, 104, 0.7); backdrop-filter: blur(5px); border-radius: 10px; padding: 5px; z-index: 10;">
+						<img src="resources/icon_youtube.svg" alt="YouTube icon" style="width: 20px; height: 20px;">
+					</div>
+					<img src="resources/tex_talk_coming_soon.svg" data-i18n-attr="alt: talks.comingsoonalt"
+						alt="">
+					<div class="item-text"><span data-i18n="talk.channel">Game engines</span> <img
+							src="resources/icon_open-in-new-tab.svg" class="external-link-icon"
+							alt="Open in new tab icon"></div>
+				</div>
+			</a>
+			<a href="https://www.youtube.com/watch?v=KWcO_jwDOLI&amp;t=2763s" target="_blank" rel="noopener noreferrer" class="project">
+				<div class="item-content">
+					<div class="project-icons-overlay"
+						style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: row; gap: 5px; background-color: rgba(25, 81, 104, 0.7); backdrop-filter: blur(5px); border-radius: 10px; padding: 5px; z-index: 10;">
+						<img src="resources/icon_youtube.svg" alt="YouTube icon" style="width: 20px; height: 20px;">
+					</div>
+					<img src="resources/tex_audio.webp" data-i18n-attr="alt: talk.four"
+						alt="">
+					<div class="item-text"><span data-i18n="talk.four">Audio synchronization</span> <img
+							src="resources/icon_open-in-new-tab.svg" class="external-link-icon"
+							alt="Open in new tab icon"></div>
+				</div>
+			</a>
+			<a href="https://www.youtube.com/watch?v=AUnRKvaqinQ&amp;t=1126s" target="_blank" rel="noopener noreferrer" class="project">
+				<div class="item-content">
+					<div class="project-icons-overlay"
+						style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: row; gap: 5px; background-color: rgba(25, 81, 104, 0.7); backdrop-filter: blur(5px); border-radius: 10px; padding: 5px; z-index: 10;">
+						<img src="resources/icon_youtube.svg" alt="YouTube icon" style="width: 20px; height: 20px;">
+					</div>
+					<img src="resources/tex_habilidades_sociales.webp" data-i18n-attr="alt: talk.three"
+						alt="">
+					<div class="item-text"><span data-i18n="talk.three">Social Skills</span> <img
+							src="resources/icon_open-in-new-tab.svg" class="external-link-icon"
+							alt="Open in new tab icon"></div>
+				</div>
+			</a>
+			<a href="https://www.youtube.com/watch?v=qWxWCr9aDU0&amp;t=786s" target="_blank" rel="noopener noreferrer" class="project">
+				<div class="item-content">
+					<div class="project-icons-overlay"
+						style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: row; gap: 5px; background-color: rgba(25, 81, 104, 0.7); backdrop-filter: blur(5px); border-radius: 10px; padding: 5px; z-index: 10;">
+						<img src="resources/icon_youtube.svg" alt="YouTube icon" style="width: 20px; height: 20px;">
+					</div>
+					<img src="resources/tex_dod.webp" data-i18n-attr="alt: talk.two"
+						alt="">
+					<div class="item-text"><span data-i18n="talk.two">Data-Oriented Programming</span> <img
+							src="resources/icon_open-in-new-tab.svg" class="external-link-icon"
+							alt="Open in new tab icon"></div>
+				</div>
+			</a>
+			<a href="https://www.youtube.com/watch?v=cFof8S1PJCc&amp;t=997s" target="_blank" rel="noopener noreferrer" class="project">
+				<div class="item-content">
+					<div class="project-icons-overlay"
+						style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: row; gap: 5px; background-color: rgba(25, 81, 104, 0.7); backdrop-filter: blur(5px); border-radius: 10px; padding: 5px; z-index: 10;">
+						<img src="resources/icon_youtube.svg" alt="YouTube icon" style="width: 20px; height: 20px;">
+					</div>
+					<img src="resources/tex_shaders.webp" data-i18n-attr="alt: talk.one"
+						alt="">
+					<div class="item-text"><span data-i18n="talk.one">Introduction to Shaders</span> <img
+							src="resources/icon_open-in-new-tab.svg" class="external-link-icon"
+							alt="Open in new tab icon"></div>
+				</div>
+			</a>
+		</section>
+
+		<h2 class="category" data-i18n="category.games">GAMES</h2>
 
 		<section class="projects">
 			<a href="https://sara01.itch.io/what-would-you-do" target="_blank" rel="noopener noreferrer"
@@ -228,12 +305,12 @@
 						<img src="resources/icon_itchio.svg" alt="Itch.io icon" style="width: 20px; height: 20px;">
 						<img src="resources/icon_github.svg" alt="GitHub icon" style="width: 20px; height: 20px;">
 					</div>
-					<video autoplay loop muted playsinline preload="auto">
+					<video autoplay loop muted playsinline preload="metadata">
 						<source src="resources/video_what_would_you_do.webm" type="video/webm">
 						<source src="resources/video_what_would_you_do.mp4" type="video/mp4">
 						**Video: Gameplay from "What would you do?", a narrative choice-based game.**
 					</video>
-					<div class="item-text">What would you do? <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="game.whatwouldyoudo">What would you do?</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"> </div>
 				</div>
 			</a>
@@ -244,12 +321,12 @@
 						style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: row; gap: 5px; background-color: rgba(25, 81, 104, 0.7); backdrop-filter: blur(5px); border-radius: 10px; padding: 5px; z-index: 10;">
 						<img src="resources/icon_itchio.svg" alt="Itch.io icon" style="width: 20px; height: 20px;">
 					</div>
-					<video autoplay loop muted playsinline preload="auto">
+					<video autoplay loop muted playsinline preload="metadata">
 						<source src="resources/video_just_one_more_song.webm" type="video/webm">
 						<source src="resources/video_just_one_more_song.mp4" type="video/mp4">
 						**Video: Gameplay from "Just One More Song", a shortfilm-like game.**
 					</video>
-					<div class="item-text">Just One More Song <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="game.onemoresong">Just One More Song</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
@@ -260,12 +337,12 @@
 						style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: row; gap: 5px; background-color: rgba(25, 81, 104, 0.7); backdrop-filter: blur(5px); border-radius: 10px; padding: 5px; z-index: 10;">
 						<img src="resources/icon_itchio.svg" alt="Itch.io icon" style="width: 20px; height: 20px;">
 					</div>
-					<video autoplay loop muted playsinline preload="auto">
+					<video autoplay loop muted playsinline preload="metadata">
 						<source src="resources/video_short_platformer.webm" type="video/webm">
 						<source src="resources/video_short_platformer.mp4" type="video/mp4">
 						**Video: Gameplay from a short platformer experience.**
 					</video>
-					<div class="item-text">Short platformer experience <img src="resources/icon_open-in-new-tab.svg"
+					<div class="item-text"><span data-i18n="game.platformer">Short platformer experience</span> <img src="resources/icon_open-in-new-tab.svg"
 							class="external-link-icon" alt="Open in new tab icon"></div>
 				</div>
 			</a>
@@ -273,7 +350,7 @@
 	</main>
 
 	<footer style="display: flex; justify-content: center; align-items: center; padding-bottom: 1rem;">
-		<span class="highlight"
+		<span class="highlight" data-i18n="footer.madeby"
 			style="background-color: rgba(25, 81, 104, 0.7); padding: 0.1rem 0.5rem; border-radius: 0.5rem;">Made with ♥
 			by Sara San Martín, 2025</span>
 	</footer>
