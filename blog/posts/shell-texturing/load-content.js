@@ -1,3 +1,7 @@
+/* Bumped on deploy so GitHub Pages' asset caching cannot serve a stale post.
+   Keep in step with the ?v= stamps on the CSS/JS tags in index.html. */
+const CONTENT_VERSION = '20260917';
+
 marked.setOptions({
 	sanitizer: false,
 	escape: false,
@@ -73,7 +77,7 @@ function renderContent(markdown) {
 function loadContent(lang) {
 	const file = lang === 'es' ? './content.es.md' : './content.en.md';
 
-	fetch(file)
+	fetch(`${file}?v=${CONTENT_VERSION}`)
 		.then(response => {
 			if (!response.ok) {
 				throw new Error('Failed to load content');
