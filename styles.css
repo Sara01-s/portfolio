@@ -176,7 +176,8 @@ body {
 		}
 
 		.project {
-			border-radius: 1rem;
+			--card-radius: 1rem;
+			border-radius: var(--card-radius);
 			overflow: hidden;
 			position: relative;
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -196,6 +197,13 @@ body {
 				flex-direction: column;
 				position: relative;
 				border-radius: inherit;
+				/* overflow: hidden plus border-radius does NOT clip a <video>:
+				   on a GPU-accelerated browser the video gets its own
+				   compositor layer and is painted past the rounded corners.
+				   clip-path is applied by the compositor itself, so it does
+				   clip it. It goes here rather than on .project because
+				   clip-path would cut that element's box-shadow too. */
+				clip-path: inset(0 round var(--card-radius));
 
 				img,
 				video {
@@ -203,9 +211,7 @@ body {
 					height: 100%;
 					object-fit: cover;
 					cursor: pointer;
-					/* A video gets its own compositing layer and escapes the
-					   card's rounded overflow clip, so it has to round itself.
-					   Chained inherit carries the radius down from .project. */
+					/* Belt and braces with the clip-path above. */
 					border-radius: inherit;
 				}
 
