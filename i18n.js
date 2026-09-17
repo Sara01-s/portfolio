@@ -6,7 +6,7 @@ const STORAGE_KEY = 'preferred-lang';
 
 const translations = {
 	en: {
-		'nav.blog': 'Blog',
+		'nav.blog': 'Blogs',
 		'nav.home': 'Home',
 
 		'hero.greeting': 'Hello!',
@@ -18,6 +18,7 @@ const translations = {
 		'category.games': 'GAMES',
 		'category.talks': 'TALKS',
 		'talks.comingsoonalt': 'Coming soon',
+		'talks.hoverme': 'Hover me',
 		'talk.one': 'Introduction to Shaders',
 		'talk.two': 'Data-Oriented Programming',
 		'talk.three': 'Social Skills',
@@ -40,14 +41,32 @@ const translations = {
 		'game.onemoresong': 'Just One More Song',
 		'game.platformer': 'Short platformer experience',
 
-		'footer.madeby': 'Made with ♥ by Sara San Martín, 2025',
+		'category.contact': 'CONTACT ME',
+		'contact.intro': 'Have a project in mind, a role to fill, or just want to talk about graphics programming? Write me.',
+		'contact.name': 'Your name',
+		'contact.nameplaceholder': 'Ada Lovelace',
+		'contact.email': 'Your email',
+		'contact.emailplaceholder': 'ada@example.com',
+		'contact.subject': 'Subject',
+		'contact.subjectplaceholder': 'Job opportunity',
+		'contact.message': 'Message',
+		'contact.messageplaceholder': 'Tell me what you have in mind...',
+		'contact.send': 'Send message',
+		'contact.direct': 'Or email me directly',
 
-		'blog.title': 'Blog',
-		'blog.description': 'Technical articles about engine and game development, </br> graphics programming and other things I find interesting.',
+		'footer.madeby': 'Made with ♥ by Sara San Martín, 2026',
 
-		'post.shell.title': 'Shell Texturing.',
-		'post.shell.readingtime': '8 min read.',
+		'blog.title': 'Blogs',
+		'blog.description': 'Technical articles about engine and game development, graphics programming and other things I find interesting.',
+		'blog.readpost': 'Click to read',
+		'blog.tag.rendering': 'Rendering',
+		'blog.shell.excerpt': 'A step-by-step breakdown of the technique behind fur and grass in games, built from scratch in Unity.',
+		'blog.shell.date': 'July 12, 2024',
+
+		'post.shell.title': 'Shell Texturing',
+		'post.shell.readingtime': '8 min read',
 		'post.sourcecode': 'Source Code: ',
+		'post.backtoblog': 'Back to blog',
 
 		'meta.description': 'Sara is a Game Developer and Designer. Explore her projects, games, blogs and more on her website.',
 		'meta.ogdescription': 'Personal Sara\'s website. Explore her projects, games, blogs and more.',
@@ -58,7 +77,7 @@ const translations = {
 		'lang.togglelabel': 'Ver esta página en español',
 	},
 	es: {
-		'nav.blog': 'Blog',
+		'nav.blog': 'Blogs',
 		'nav.home': 'Inicio',
 
 		'hero.greeting': '¡Hola!',
@@ -70,6 +89,7 @@ const translations = {
 		'category.games': 'JUEGOS',
 		'category.talks': 'CHARLAS',
 		'talks.comingsoonalt': 'Disponible próximamente',
+		'talks.hoverme': 'Mantén',
 		'talk.one': 'Intro a los Shaders',
 		'talk.two': 'Programación Orientada a Datos',
 		'talk.three': 'Habilidades Sociales',
@@ -92,14 +112,32 @@ const translations = {
 		'game.onemoresong': 'Just One More Song',
 		'game.platformer': 'Plataformas 2D',
 
+		'category.contact': 'CONTÁCTAME',
+		'contact.intro': '¿Tienes un proyecto en mente, una vacante que llenar, o simplemente quieres hablar de programación gráfica? Escríbeme.',
+		'contact.name': 'Tu nombre',
+		'contact.nameplaceholder': 'Ada Lovelace',
+		'contact.email': 'Tu correo',
+		'contact.emailplaceholder': 'ada@ejemplo.com',
+		'contact.subject': 'Asunto',
+		'contact.subjectplaceholder': 'Oportunidad laboral',
+		'contact.message': 'Mensaje',
+		'contact.messageplaceholder': 'Cuéntame qué tienes en mente...',
+		'contact.send': 'Enviar mensaje',
+		'contact.direct': 'O escríbeme directamente',
+
 		'footer.madeby': 'Hecho con ♥ por Sara San Martín, 2026',
 
-		'blog.title': 'Blog',
-		'blog.description': 'Artículos técnicos sobre desarrollo de motores y videojuegos, </br> programación gráfica y otras cosas que me parecen interesantes.',
+		'blog.title': 'Blogs',
+		'blog.description': 'Artículos técnicos sobre desarrollo de motores y videojuegos, programación gráfica y otras cosas que me parecen interesantes.',
+		'blog.readpost': 'Clic para leer',
+		'blog.tag.rendering': 'Renderizado',
+		'blog.shell.excerpt': 'Análisis paso a paso de la técnica detrás del pelaje y el césped en videojuegos, implementada desde cero en Unity.',
+		'blog.shell.date': '12 de julio de 2024',
 
-		'post.shell.title': 'Shell Texturing.',
-		'post.shell.readingtime': '8 min de lectura.',
+		'post.shell.title': 'Shell Texturing',
+		'post.shell.readingtime': '8 min de lectura',
 		'post.sourcecode': 'Código fuente: ',
+		'post.backtoblog': 'Volver al blog',
 
 		'meta.description': 'Sara es desarrolladora y diseñadora de videojuegos. Explora sus proyectos, juegos, blogs y más en su sitio web.',
 		'meta.ogdescription': 'Sitio web personal de Sara. Explora sus proyectos, juegos, blogs y más.',

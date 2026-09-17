@@ -18,43 +18,76 @@
 	<meta name="twitter:card" content="summary_large_image">
 
 	<title>Blog | Sara San Martín</title>
-	<link rel="icon" type="image/webp" href="../resources/icon_clouds_rounded.webp" alt="Clouds Icon">
+	<link rel="icon" type="image/webp" href="../resources/icon_clouds_rounded.webp">
 	<link rel="stylesheet" href="../styles.css">
 	<link rel="stylesheet" href="blog.css">
 	<script src="../i18n.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
-<body>
-	<div class="content-wrapper">
-		<div class="up-section">
-			<div class="logo-container">
-				<a href="../index.html" class="logo-circle"></a>
-				<a href="../index.html" class="blog" data-i18n="nav.home">Home</a>
-				<button type="button" class="lang-toggle" data-i18n="lang.toggle"
-					data-i18n-attr="aria-label: lang.togglelabel, title: lang.togglelabel">ES</button>
+<body class="blog-index">
+	<picture>
+		<source srcset="../resources/tex_cloud_landscape.webp" type="image/webp">
+		<img src="../resources/tex_cloud_landscape.webp" alt="">
+	</picture>
+
+	<header class="up-section">
+		<div class="logo-container">
+			<a href="../index.html" class="logo-circle" aria-label="Sara San Martín, home"></a>
+			<a href="../index.html" class="blog" data-i18n="nav.home">Home</a>
+			<button type="button" class="lang-toggle" data-i18n="lang.toggle"
+				data-i18n-attr="aria-label: lang.togglelabel, title: lang.togglelabel">ES</button>
+		</div>
+	</header>
+
+	<main class="blog-main">
+		<!-- The band keeps the heading readable wherever the sky sits behind it. -->
+		<div class="blog-band">
+			<div class="blog-band-inner">
+				<h1 data-i18n="blog.title">Blog</h1>
+				<p data-i18n="blog.description">Technical articles about engine and game development, graphics
+					programming and other things I find interesting.</p>
 			</div>
 		</div>
 
-		<section class="left-section">
-			<h1 data-i18n="blog.title">Blog</h1>
-			<p data-i18n="blog.description">Technical articles about engine and game development, </br> graphics
-				programming and other things I find interesting.</p>
-		</section>
+		<section class="blog-grid" aria-label="Posts">
+			<article class="post-card">
+				<a class="post-card-link" href="posts/shell-texturing/index.html">
+					<div class="post-media">
+						<video autoplay loop muted playsinline preload="metadata" data-autoplay>
+							<source src="../resources/video_shell_texturing_hand_scene.webm" type="video/webm">
+							<source src="../resources/video_shell_texturing_hand_scene.mp4" type="video/mp4">
+							Fur rendered with shell texturing on a hand model.
+						</video>
+						<span class="read-badge" data-i18n="blog.readpost">Click to read</span>
+					</div>
 
-		<div class="right-section">
-			<section class="blog-grid">
-				<a href="posts/shell-texturing/index.html" class="grid-item">
-					<video autoplay loop muted playsinline preload="metadata"
-						aria-label="Shell texturing hand scene demonstration">
-						<source src="../resources/video_shell_texturing_hand_scene.webm" type="video/webm">
-						<source src="../resources/video_shell_texturing_hand_scene.mp4" type="video/mp4">
-						Shell texturing hand scene demonstration
-					</video>
+					<div class="post-info">
+						<ul class="post-tags">
+							<li>Unity</li>
+							<li>HLSL</li>
+							<li data-i18n="blog.tag.rendering">Rendering</li>
+						</ul>
+
+						<h2 data-i18n="post.shell.title">Shell Texturing</h2>
+
+						<p class="post-excerpt" data-i18n="blog.shell.excerpt">A step-by-step breakdown of the technique
+							behind fur and grass in games, built from scratch in Unity.</p>
+
+						<div class="post-meta">
+							<time datetime="2024-07-12" data-i18n="blog.shell.date">July 12, 2024</time>
+							<span aria-hidden="true">·</span>
+							<span data-i18n="post.shell.readingtime">8 min read</span>
+						</div>
+					</div>
 				</a>
-			</section>
-		</div>
-	</div>
+			</article>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<span class="footer-badge" data-i18n="footer.madeby">Made with ♥ by Sara San Martín, 2026</span>
+	</footer>
+
 	<script src="scripts.js"></script>
 </body>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -21,19 +21,17 @@
 	<meta name="twitter:card" content="summary_large_image">
 
 	<title>Shell Texturing | Sara San Martín</title>
-	<link rel="icon" type="image/webp" href="../../../resources/icon_clouds_rounded.webp" alt="Clouds Icon">
+	<link rel="icon" type="image/webp" href="../../../resources/icon_clouds_rounded.webp">
 	<link rel="stylesheet" href="../../../styles.css">
 	<link rel="stylesheet" href="../../blog.css">
 	<link rel="stylesheet" href="../post.css">
 	<script src="../../../i18n.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/csharp.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/cpp.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/glsl.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/c.min.js"></script>
-	<script>hljs.highlightAll();</script>
 	<!-- MathJax config. -->
 	<script>
 		MathJax = {
@@ -77,30 +75,52 @@
 	</script>
 </head>
 
-<body>
-	<main class="container">
-		<div class="up-section">
-			<div class="logo-container">
-				<a href="../../../index.html" class="logo-circle"></a>
-				<a href="../../../index.html" class="blog" data-i18n="nav.home">Home</a>
-				<a href="../../../blog/index.html" class="blog" data-i18n="nav.blog">Blog</a>
-				<button type="button" class="lang-toggle" data-i18n="lang.toggle"
-					data-i18n-attr="aria-label: lang.togglelabel, title: lang.togglelabel">ES</button>
+<body class="post-page">
+	<picture>
+		<source srcset="../../../resources/tex_cloud_landscape.webp" type="image/webp">
+		<img src="../../../resources/tex_cloud_landscape.webp" alt="">
+	</picture>
+
+	<!-- How far down the article the reader is. -->
+	<div class="reading-progress" aria-hidden="true"><span></span></div>
+
+	<header class="up-section">
+		<div class="logo-container">
+			<a href="../../../index.html" class="logo-circle" aria-label="Sara San Martín, home"></a>
+			<a href="../../../index.html" class="blog" data-i18n="nav.home">Home</a>
+			<a href="../../index.html" class="blog" data-i18n="nav.blog">Blog</a>
+			<button type="button" class="lang-toggle" data-i18n="lang.toggle"
+				data-i18n-attr="aria-label: lang.togglelabel, title: lang.togglelabel">ES</button>
+		</div>
+	</header>
+
+	<main class="post-main">
+		<div class="post-hero">
+			<div class="post-hero-inner">
+				<a class="back-link" href="../../index.html">
+					<span aria-hidden="true">&larr;</span> <span data-i18n="post.backtoblog">Back to blog</span>
+				</a>
+
+				<ul class="post-tags">
+					<li>Unity</li>
+					<li>GLSL</li>
+					<li data-i18n="blog.tag.rendering">Rendering</li>
+				</ul>
+
+				<h1 data-i18n="post.shell.title">Shell Texturing</h1>
+
+				<div class="post-meta">
+					<time datetime="2024-07-12" data-i18n="blog.shell.date">July 12, 2024</time>
+					<span aria-hidden="true">·</span>
+					<span data-i18n="post.shell.readingtime">8 min read</span>
+				</div>
 			</div>
 		</div>
 
 		<div class="blog-section">
 			<article>
-				<header>
-					<h1 data-i18n="post.shell.title">Shell Texturing.</h1>
-					<div class="post-meta">
-						<time datetime="2025-03-18">Jul 12, 2024</time>
-						<span class="reading-time" data-i18n="post.shell.readingtime">8 min read.</span>
-					</div>
-				</header>
-
 				<section class="post-body">
-					<video autoplay loop muted playsinline preload="auto" class="hero-image">
+					<video autoplay loop muted playsinline preload="auto" class="hero-image" data-autoplay>
 						<source src="../../../resources/video_shell_texturing_hand_scene.webm" type="video/webm">
 						<source src="../../../resources/video_shell_texturing_hand_scene.mp4" type="video/mp4">
 					</video>
@@ -110,6 +130,10 @@
 			</article>
 		</div>
 	</main>
+
+	<footer class="site-footer">
+		<span class="footer-badge" data-i18n="footer.madeby">Made with ♥ by Sara San Martín, 2026</span>
+	</footer>
 </body>
 
 </html>

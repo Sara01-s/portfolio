@@ -1,32 +1,105 @@
-.container {
+/* Article page. The shared shell (background, nav, footer, tags) comes from
+   styles.css and blog.css. */
+
+.post-page {
+	display: flex;
 	flex-direction: column;
-	padding-top: 80px;
-	height: 100vh;
-	overflow-y: auto;
-	scrollbar-width: thin;
-	scrollbar-color: var(--primary-color) transparent;
+	min-height: 100vh;
 }
 
-.container::-webkit-scrollbar {
-	width: 6px;
+/* The page scrolls normally. It used to be a 100vh box with its own scrollbar,
+   which broke anchors, scroll restoration and the mobile URL bar. */
+.post-page .up-section {
+	position: sticky;
+	left: auto;
 }
 
-.container::-webkit-scrollbar-track {
-	background: transparent;
+/* Reading progress */
+.reading-progress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background-color: rgba(0, 0, 0, 0.35);
+	z-index: 20;
 }
 
-.container::-webkit-scrollbar-thumb {
+.reading-progress span {
+	display: block;
+	height: 100%;
+	width: 0;
 	background-color: var(--primary-color);
-	border-radius: 3px;
+	transition: width 0.1s linear;
 }
 
+.post-main {
+	flex: 1;
+	width: 100%;
+}
+
+/* Title block */
+.post-hero {
+	width: 100%;
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.75), rgba(13, 44, 58, 0.65));
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+	border-bottom: 1px solid rgba(135, 206, 235, 0.25);
+	margin-bottom: 2.5rem;
+}
+
+.post-hero-inner {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 2.5rem 10% 3rem;
+
+	h1 {
+		font-size: clamp(2rem, 6vw, 3.5rem);
+		line-height: 1.15;
+		margin: 1rem 0;
+		color: var(--primary-color);
+	}
+}
+
+.back-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	color: var(--primary-color);
+	text-decoration: none;
+	font-size: 0.9rem;
+	font-weight: 600;
+	margin-bottom: 1.25rem;
+
+	&:hover {
+		text-decoration: underline;
+		text-underline-offset: 4px;
+	}
+
+	&:focus-visible {
+		outline: 3px solid var(--text-color);
+		outline-offset: 3px;
+		border-radius: 0.25rem;
+	}
+}
+
+.post-hero .post-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.6rem;
+	font-size: 0.95rem;
+	color: rgba(255, 255, 255, 0.75);
+}
+
+/* Article */
 .blog-section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	padding-left: 20%;
 	padding-right: 20%;
-	overflow: auto;
+	padding-bottom: 3rem;
 }
 
 .blog-section article {
@@ -37,16 +110,6 @@
 	border-radius: 1rem;
 	padding: 3rem;
 	margin: 0 auto;
-}
-
-.blog-section article header {
-	margin-bottom: 2rem;
-}
-
-.blog-section article h1 {
-	font-size: 3lh;
-	margin-bottom: 1rem;
-	line-height: 1.2;
 }
 
 .blog-section article a {
@@ -105,12 +168,79 @@
 	border-radius: 0;
 }
 
-.blog-section article .post-meta {
+/* highlight.js theme. The library was already loading and tagging the tokens,
+   but no theme was ever included, so every block rendered flat white.
+   Selectors are `.post-body pre code .hljs-*` to outrank `article code`. */
+.post-body pre code .hljs-comment,
+.post-body pre code .hljs-quote {
+	color: #7a96a6;
+	font-style: italic;
+}
+
+/* float, void, return, if, uniform, in, out */
+.post-body pre code .hljs-keyword,
+.post-body pre code .hljs-selector-tag,
+.post-body pre code .hljs-meta-keyword {
+	color: #c792ea;
+}
+
+/* vec3, mat4, sampler2D, and the built-ins: texture, normalize, dot */
+.post-body pre code .hljs-type,
+.post-body pre code .hljs-built_in,
+.post-body pre code .hljs-class .hljs-title {
 	color: var(--primary-color);
-	font-size: 0.9lh;
-	display: flex;
-	gap: 1rem;
-	flex-wrap: wrap;
+}
+
+.post-body pre code .hljs-number,
+.post-body pre code .hljs-literal,
+.post-body pre code .hljs-symbol {
+	color: #f7a56b;
+}
+
+.post-body pre code .hljs-string,
+.post-body pre code .hljs-regexp,
+.post-body pre code .hljs-template-variable {
+	color: #9ae6a4;
+}
+
+/* #version, #define and friends */
+.post-body pre code .hljs-meta,
+.post-body pre code .hljs-meta .hljs-string {
+	color: #b39ddb;
+}
+
+.post-body pre code .hljs-title,
+.post-body pre code .hljs-title.function_,
+.post-body pre code .hljs-section {
+	color: #ffd479;
+}
+
+.post-body pre code .hljs-variable,
+.post-body pre code .hljs-attr,
+.post-body pre code .hljs-attribute,
+.post-body pre code .hljs-property {
+	color: #e0e6eb;
+}
+
+.post-body pre code .hljs-operator,
+.post-body pre code .hljs-punctuation {
+	color: #c3ced6;
+}
+
+.post-body pre code .hljs-deletion {
+	color: #ffb3b3;
+}
+
+.post-body pre code .hljs-addition {
+	color: #9ae6a4;
+}
+
+.post-body pre code .hljs-emphasis {
+	font-style: italic;
+}
+
+.post-body pre code .hljs-strong {
+	font-weight: 700;
 }
 
 .blog-section article .post-body {
@@ -143,11 +273,17 @@
 	margin: 1em 0;
 }
 
-@media (max-width: 768px) {
-	.container {
-		padding-top: 60px;
+@media (max-width: 900px) {
+	.post-hero {
+		margin-bottom: 1.5rem;
 	}
 
+	.post-hero-inner {
+		padding: 1.5rem 1.25rem 2rem;
+	}
+}
+
+@media (max-width: 768px) {
 	.blog-section {
 		padding-left: 5%;
 		padding-right: 5%;
@@ -156,19 +292,6 @@
 	.blog-section article {
 		padding: 1.5rem;
 		border-radius: 0.5rem;
-	}
-
-	.blog-section article h1 {
-		font-size: 2lh;
-		text-align: center;
-		word-wrap: break-word;
-	}
-
-	.blog-section article .post-meta {
-		flex-direction: column;
-		align-items: center;
-		gap: 0.5rem;
-		font-size: 0.85rem;
 	}
 
 	.blog-section article .post-body {
@@ -202,10 +325,6 @@
 
 	.blog-section article {
 		padding: 1rem;
-	}
-
-	.blog-section article h1 {
-		font-size: 1.7lh;
 	}
 
 	.blog-section article .post-body {
