@@ -195,12 +195,18 @@ body {
 				display: flex;
 				flex-direction: column;
 				position: relative;
+				border-radius: inherit;
 
-				img {
+				img,
+				video {
 					width: 100%;
 					height: 100%;
 					object-fit: cover;
 					cursor: pointer;
+					/* A video gets its own compositing layer and escapes the
+					   card's rounded overflow clip, so it has to round itself.
+					   Chained inherit carries the radius down from .project. */
+					border-radius: inherit;
 				}
 
 				.item-text {

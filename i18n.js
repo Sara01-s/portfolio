@@ -89,7 +89,7 @@ const translations = {
 		'category.games': 'JUEGOS',
 		'category.talks': 'CHARLAS',
 		'talks.comingsoonalt': 'Disponible próximamente',
-		'talks.hoverme': 'Mantén',
+		'talks.hoverme': 'Hover me',
 		'talk.one': 'Intro a los Shaders',
 		'talk.two': 'Programación Orientada a Datos',
 		'talk.three': 'Habilidades Sociales',
