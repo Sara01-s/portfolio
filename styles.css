@@ -279,11 +279,6 @@ body {
 				}
 			}
 		}
-
-		/* Cards are 180px tall here, so 320px is the width that covers them. */
-		.video-preview {
-			width: max(100%, 320px);
-		}
     }
 }
 
@@ -325,77 +320,6 @@ body {
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
 	border: 0;
-}
-
-/* Tells the visitor these cards do something. Top left, because the platform
-   icons sit top right. */
-.hover-badge {
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	z-index: 10;
-	display: inline-flex;
-	align-items: center;
-	gap: 0.35rem;
-	background-color: var(--primary-color);
-	color: #0d2c3a;
-	font-size: 0.72rem;
-	font-weight: 800;
-	letter-spacing: 0.04em;
-	text-transform: uppercase;
-	padding: 0.3rem 0.65rem;
-	border-radius: 999px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-	transition: opacity 0.25s ease, transform 0.15s ease-out;
-	pointer-events: none;
-}
-
-.hover-badge::before {
-	content: '\25B6';
-	font-size: 0.6rem;
-}
-
-/* Once the preview is running the badge has done its job. */
-.project.is-previewing .hover-badge {
-	opacity: 0;
-	transform: translateY(-4px);
-}
-
-/* No pointer, no hover: on a phone the preview starts on its own while
-   scrolling, so the prompt would be telling the visitor to do nothing. */
-@media (hover: none) {
-	.hover-badge {
-		display: none;
-	}
-}
-
-/* YouTube preview. Inserted on hover into the talk cards, removed on leave,
-   so nothing from YouTube loads until someone actually points at a card.
-   It sits before .item-text in the DOM, which keeps the caption on top. */
-.video-preview {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	/* Always 16:9, never letterboxed. 356px is what a 16:9 video needs to be
-	   wide to cover a 200px-tall card; on a card wider than that the width
-	   wins instead and the extra height gets cropped by the card's overflow. */
-	width: max(100%, 356px);
-	aspect-ratio: 16 / 9;
-	border: 0;
-	/* The card is a link: the click has to pass straight through. */
-	pointer-events: none;
-	animation: preview-in 0.25s ease-out;
-}
-
-@keyframes preview-in {
-	from {
-		opacity: 0;
-	}
-
-	to {
-		opacity: 1;
-	}
 }
 
 /* Emphasis inside the hero copy. Referenced by the i18n strings. */
