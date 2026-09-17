@@ -1,6 +1,6 @@
 /* Bumped on deploy so GitHub Pages' asset caching cannot serve a stale post.
    Keep in step with the ?v= stamps on the CSS/JS tags in index.html. */
-const CONTENT_VERSION = '20260917-5';
+const CONTENT_VERSION = '20260917-6';
 
 marked.setOptions({
 	sanitizer: false,
