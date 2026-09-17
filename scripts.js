@@ -180,9 +180,13 @@ function setupVideoPlayback() {
 		video.pause();
 	}
 
-	videos.forEach(start);
-
+	/* No eager start: calling play() on all of them would begin downloading
+	   every video at once, and pausing afterwards does not cancel a download
+	   already in flight. The observer fires on setup for whatever is already
+	   in view, so the visible cards still start immediately. Without observer
+	   support there is no way to tell, so fall back to starting everything. */
 	if (!('IntersectionObserver' in window)) {
+		videos.forEach(start);
 		return;
 	}
 

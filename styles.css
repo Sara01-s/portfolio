@@ -265,6 +265,18 @@ body {
 
 			.project {
 				height: 180px;
+
+				/* backdrop-filter makes the compositor re-read and blur what is
+				   behind the element on every frame. Over an autoplaying video
+				   that is per-frame work on the phone's weakest path, and at
+				   this size the 5px blur is not visible anyway. The flatter,
+				   more opaque background keeps the caption just as legible.
+				   Chain matches the base rule so this override actually wins. */
+				.item-content .item-text {
+					-webkit-backdrop-filter: none;
+					backdrop-filter: none;
+					background-color: rgba(25, 81, 104, 0.92);
+				}
 			}
 		}
 
